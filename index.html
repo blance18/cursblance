@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Расширенный курс по ставкам — StavkiBlance</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121822;
+    color: #e1e1e1;
+    margin: 0; padding: 0;
+  }
+  .container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #1f2738;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,165,0,0.4);
+  }
+  h1, h2, h3 {
+    color: #ffa500;
+    margin-bottom: 10px;
+  }
+  p, ul {
+    line-height: 1.5em;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+  .btn {
+    background: #ffa500;
+    border: none;
+    color: #121822;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  .btn:hover {
+    background: #ffb733;
+  }
+  .page {
+    display: none;
+  }
+  .active {
+    display: block;
+  }
+  .footer {
+    text-align: center;
+    color: #777;
+    font-size: 12px;
+    margin-top: 15px;
+  }
+  a {
+    color: #ffcc00;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .highlight {
+    color: #ffcc00;
+    font-weight: 700;
+  }
+  .question {
+    background: #292f3e;
+    border-left: 4px solid #ffa500;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div id="page1" class="page active">
+    <h1>Добро пожаловать в расширенный курс по ставкам</h1>
+    <p>В этом курсе ты получишь глубокие знания по ставкам на спорт, научишься правильно анализировать события и управлять своим банкроллом, чтобы получать стабильный доход.</p>
+    <button class="btn" onclick="nextPage(2)">Начать обучение</button>
+  </div>
+
+  <div id="page2" class="page">
+    <h2>Основы ставок</h2>
+    <p>Коэффициенты показывают вероятность исхода и потенциальный выигрыш.</p>
+    <ul>
+      <li><b>Ординар:</b> ставка на один исход</li>
+      <li><b>Экспресс:</b> ставка на несколько исходов, все должны сбыться</li>
+      <li><b>Система:</b> несколько экспрессов внутри одной ставки</li>
+    </ul>
+    <button class="btn" onclick="nextPage(3)">Далее</button>
+  </div>
+
+  <div id="page3" class="page">
+    <h2>Стратегии ставок</h2>
+    <p>Выбирай стратегию, подходящую именно тебе:</p>
+    <ul>
+      <li><b>Мартингейл:</b> удваиваем ставку после проигрыша. Рискованно!</li>
+      <li><b>Флет:</b> фиксированная ставка, минимизируем риски</li>
+      <li><b>Value betting:</b> ставки только там, где коэффициенты завышены букмекерами</li>
+    </ul>
+    <button class="btn" onclick="nextPage(4)">Далее</button>
+  </div>
+
+  <div id="page4" class="page">
+    <h2>Управление банкроллом</h2>
+    <p>Главное — грамотно распределяй бюджет:</p>
+    <ul>
+      <li>Не ставь более 5% от депозита за одну ставку</li>
+      <li>Используй резервный фонд на случай проигрыша</li>
+      <li>Записывай результаты и анализируй</li>
+    </ul>
+    <button class="btn" onclick="nextPage(5)">Далее</button>
+  </div>
+
+  <div id="page5" class="page">
+    <h2>Психология ставок</h2>
+    <p>Контроль эмоций важен:</p>
+    <ul>
+      <li>Не гоняйся за проигрышами</li>
+      <li>Не увеличивай ставки под давлением</li>
+      <li>Умей вовремя остановиться</li>
+    </ul>
+    <button class="btn" onclick="nextPage(6)">Далее</button>
+  </div>
+
+  <div id="page6" class="page">
+    <h2>Практические советы и кейсы</h2>
+    <p>Реальный пример: <br>Наш подписчик Артём поставил 1000₽ по стратегии value betting и получил +6000₽ за 3 дня.</p>
+    <p>Ошибки новичков: ставка на любимую команду без анализа, ставка «на удачу», отсутствие плана.</p>
+    <button class="btn" onclick="nextPage(7)">Далее</button>
+  </div>
+
+  <div id="page7" class="page">
+    <h2>FAQ</h2>
+    <div class="question">
+      <b>В: Можно ли сразу вывести выигрыш?</b><br />
+      О: Лучше сначала накопить стабильный банк, чтобы увеличить сумму ставок.
+    </div>
+    <div class="question"><b>В: Какие букмекеры лучше?</b><br />
+      О: Мы рекомендуем 1win с бонусом до 500% к депозиту.
+    </div>
+    <button class="btn" onclick="nextPage(8)">Далее</button>
+  </div>
+
+  <div id="page8" class="page">
+    <h2>Бонус +500%</h2>
+    <p>Пополняй счёт от <span class="highlight">1000₽</span> и получай бонус до <span class="highlight">25.000₽</span>!</p>
+    <p>Регистрация по реферальной ссылке:</p>
+    <a href="https://1wtofc.life/casino/list?open=register&p=ybib" target="_blank" style="font-weight:bold; font-size: 18px; color:#ffcc00;">Получить бонус</a>
+    <button class="btn" onclick="nextPage(9)">Далее</button>
+  </div>
+
+  <div id="page9" class="page">
+    <h2>Подписка на канал</h2>
+    <p>Чтобы получать сигналы и советы ежедневно, подпишись на наш канал:</p>
+    <a href="https://t.me/stavkiblance" target="_blank" style="font-weight:bold; font-size: 18px; color:#ffcc00;">Перейти в канал</a>
+    <button class="btn" onclick="finish()">Завершить курс</button>
+  </div>
+</div>
+
+<script>
+  function nextPage(n) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page' + n).classList.add('active');
+    window.scrollTo(0, 0);
+  }
+  function finish() {
+    window.open('https://t.me/stavkiblance', '_blank');
+  }
+</script>
+
+<div class="footer">
+  © StavkiBlance 2025 — Все права защищены
+</div>
+</body>
+</html>
